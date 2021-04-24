@@ -11,8 +11,7 @@ router.get("/notes", (req, res) => {
 });
 
 // DELETE /api/notes/:id
-// get one specific note
-// req.body.id, readfile db.json, find entry that matches that id
+// get one specific note, req.body.id, readfile db.json, find entry that matches that id
 router.delete("/notes/:id", (req, res) => {
     // rewrite data and return only elements that DON'T match deleted note ID
     data = data.filter(el => el.id !== req.params.id);
